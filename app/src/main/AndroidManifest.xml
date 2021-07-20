@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.covid19">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/vaccine1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/vaccine1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Covid19">
+        <activity android:name=".DetailActivity"
+            android:label="Affected States"
+            android:parentActivityName=".Affected_Sates">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Affected_Sates" />
+        </activity>
+        <activity
+            android:name=".Affected_Sates"
+            android:label="Affected States"
+            android:parentActivityName=".IndiaCases">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".IndiaCases" />
+        </activity>
+        <activity
+            android:name=".Vaccine"
+            android:label="Vaccine"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".IndiaCases"
+            android:label="India Stats"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

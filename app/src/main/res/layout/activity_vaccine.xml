@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vaccine">
+
+
+
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+        <RadioButton android:id="@+id/radio_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search by Pin"
+            android:onClick="OpenPincode"/>
+        <RadioButton android:id="@+id/radio_district"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search by District"
+            android:onClick="OpenState"
+            android:layout_marginLeft="10dp"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/pin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/radio"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <EditText
+            android:id="@+id/pin_edit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Pincode"
+            android:inputType="numberSigned" />
+
+        <Button
+            android:id="@+id/pin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/radio"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <Spinner
+            android:id="@+id/state_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Choose State"/>
+        <Spinner
+            android:id="@+id/district_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Choose District"
+            android:layout_marginLeft="2dp"/>
+        <Button
+            android:id="@+id/district_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/date_layout"
+        android:orientation="horizontal"
+        android:layout_marginTop="185dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/Date1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Date"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_view"/>
+
+        <TextView
+            android:id="@+id/Date2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Date"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_view"/>
+
+        <TextView
+            android:id="@+id/Date3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Date"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_view"/>
+        <TextView
+            android:id="@+id/Date4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Date"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_view"/>
+        <TextView
+            android:id="@+id/Date5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Date"
+            android:gravity="center"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_corner_view"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_vaccine"
+        android:layout_below="@id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="20dp"/>
+
+
+</RelativeLayout>
